@@ -1,3 +1,4 @@
+require("dotenv").config();
 import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-waffle";
 import "@nomiclabs/hardhat-ethers";
@@ -26,6 +27,7 @@ const config: HardhatUserConfig = {
   react: {
     providerPriority: ["web3modal", "hardhat"],
   },
+
   solidity: {
     compilers: [
       {
@@ -38,6 +40,13 @@ const config: HardhatUserConfig = {
         },
       },
     ],
+  },
+  networks: {
+    hardhat: {
+      forking: {
+        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+      },
+    },
   },
 };
 export default config;
