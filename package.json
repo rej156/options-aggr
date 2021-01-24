@@ -25,6 +25,7 @@
   "scripts": {
     "test": "npx hardhat test",
     "node": "npx hardhat node --watch",
+    "console": "npx hardhat console",
     "frontend": "cd frontend && npm run start"
   },
   "repository": {
