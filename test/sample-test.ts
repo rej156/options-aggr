@@ -2,7 +2,7 @@ import { ethers } from "hardhat";
 import { Signer } from "ethers";
 import { assert } from "chai";
 
-describe("Token", function () {
+describe("Greeter", function () {
   let accounts: Signer[];
 
   beforeEach(async function () {
@@ -10,6 +10,7 @@ describe("Token", function () {
   });
 
   it("should have accounts", async function () {
+    // console.log(accounts);
     assert(accounts.length > 0, "Account legth should be more then zero");
   });
 });
